@@ -1,24 +1,31 @@
 {
-    "name": "vendor_slug/:project_slug",
+    "name": "vendor_slug/project_slug",
     "type": "project",
     "description": ":project_description",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
         "php": "^8.0",
+        "blade-ui-kit/blade-heroicons": "^1.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "khatabwedaa/blade-css-icons": "^1.0",
         "laravel/framework": "^8.54",
         "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "livewire/livewire": "^2.6",
+        "rawilk/laravel-base": "^0.0.9",
+        "rawilk/laravel-form-components": "^6.0"
     },
     "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.10",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",
-        "phpunit/phpunit": "^9.3.3"
+        "phpunit/phpunit": "^9.3.3",
+        "spatie/laravel-ray": "^1.25"
     },
     "autoload": {
         "psr-4": {

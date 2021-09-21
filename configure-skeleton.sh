@@ -103,6 +103,7 @@ grep -E -r -l -i ":author|:vendor|:project|VendorName|skeleton|vendor_name|vendo
         temp_file="$file.temp"
         < "$file" \
           sed "s#:project_slug#$project_slug#g" \
+        | sed "s#project_slug#$project_slug#g" \
         | sed "s#:author_name#$author_name#g" \
         | sed "s#:author_username#$author_username#g" \
         | sed "s#author@domain.com#$author_email#g" \
