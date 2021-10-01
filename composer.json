@@ -14,8 +14,10 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.6",
-        "rawilk/laravel-base": "^0.0.9",
-        "rawilk/laravel-form-components": "^6.0"
+        "rawilk/laravel-base": "dev-main",
+        "rawilk/laravel-casters": "^2.0",
+        "rawilk/laravel-form-components": "^6.0",
+        "spatie/laravel-menu": "^4.0"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.10",
@@ -32,7 +34,10 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files": [
+            "app/Helpers/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
@@ -65,5 +70,11 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../packages/laravel-base"
+        }
+    ]
 }

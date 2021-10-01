@@ -53,6 +53,18 @@ return [
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
         ],
 
+        /*
+         * Custom "disks"...
+         */
+
+        'avatars' => [
+            'driver' => 'local',
+            'root' => storage_path('app/avatars'),
+            'url' => env('APP_URL') . '/avatars',
+            'visibility' => 'public',
+            'path' => '/avatars',
+        ],
+
     ],
 
     /*
@@ -68,6 +80,7 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
+        public_path('avatars') => storage_path('app/avatars'),
     ],
 
 ];

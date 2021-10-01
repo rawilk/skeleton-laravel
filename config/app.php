@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        \Rawilk\LaravelBase\LaravelBaseServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -174,6 +175,10 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\LaravelBaseServiceProvider::class,
+        App\Providers\BladeComponentsServiceProvider::class,
+        App\Providers\NavigationServiceProvider::class,
+        App\Providers\ViewComposerServiceProvider::class,
 
     ],
 
