@@ -90,6 +90,8 @@ if ! confirm "Modify files?"; then
     $safe_exit 1
 fi
 
+cp .env.example .env
+
 grep -E -r -l -i ":author|:vendor|:project|VendorName|skeleton|vendor_name|vendor_slug|author@domain.com" --exclude-dir=vendor ./* ./.github/* \
 | grep -v "$script_name" \
 | while read -r file ; do
@@ -118,8 +120,8 @@ grep -E -r -l -i ":author|:vendor|:project|VendorName|skeleton|vendor_name|vendo
         mv "$temp_file" "$new_file"
 done
 
-if confirm "Execute composer install and phpunit test"; then
-    composer install && ./vendor/bin/phpunit
+if confirm "Execute composer install"; then
+    composer install && php artisan key:generate
 fi
 
 if confirm 'Let this script delete itself (since you only need it once)?'; then
