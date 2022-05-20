@@ -14,7 +14,7 @@ final class WelcomeNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
-    public function __construct(private null | string $password = null)
+    public function __construct(private null|string $password = null)
     {
         $this->queue = Queues::mail();
     }
