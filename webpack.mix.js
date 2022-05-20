@@ -13,6 +13,7 @@ mix
     .options({
         postCss: [
             require('postcss-import'),
+            require('tailwindcss/nesting'),
             require('tailwindcss'),
         ],
     });

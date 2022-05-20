@@ -4,28 +4,25 @@ const safelist = require('./tailwind-safelist-preset');
 
 module.exports = {
 
-    mode: 'jit',
+    content: [
+        './app/**/*.php',
+        './resources/**/*.html',
+        './resources/**/*.js',
+        './resources/**/*.php',
+        './config/site.php',
 
-    purge: {
-        content: [
-            './app/**/*.php',
-            './resources/**/*.html',
-            './resources/**/*.js',
-            './resources/**/*.php',
-            './config/site.php',
+        // Vendor
+        './vendor/rawilk/laravel-breadcrumbs/resources/**/*.php',
+        './vendor/rawilk/laravel-form-components/resources/js/*.js',
+        './vendor/rawilk/laravel-form-components/src/**/*.php',
+        './vendor/rawilk/laravel-form-components/resources/**/*.php',
+        './vendor/rawilk/laravel-base/resources/**/*.php',
+        './vendor/rawilk/laravel-base/src/**/*.php',
+        './vendor/rawilk/laravel-base/resources/js/**/*.js',
+        './vendor/rawilk/laravel-base/config/laravel-base.php',
+    ],
 
-            // vendor
-            './vendor/rawilk/laravel-base/resources/js/*.js',
-            './vendor/rawilk/laravel-base/src/**/*.php',
-            './vendor/rawilk/laravel-base/resources/**/*.php',
-            './vendor/rawilk/laravel-form-components/resources/js/*.js',
-            './vendor/rawilk/laravel-form-components/src/**/*.php',
-            './vendor/rawilk/laravel-form-components/resources/**/*.php',
-            // './vendor/rawilk/laravel-breadcrumbs/resources/**/*.php',
-        ],
-
-        safelist: safelist.purge.safelist,
-    },
+    safelist: safelist.safelist,
 
     plugins: [
         require('@tailwindcss/forms'),
@@ -38,15 +35,13 @@ module.exports = {
         require('./vendor/rawilk/laravel-base/resources/js/tailwind-plugins/button'),
     ],
 
-    darkMode: false, // or 'media' or 'class'
-
     theme: {
 
         extend: {
 
             colors: {
-                'blue-gray': colors.blueGray,
-                'cool-gray': colors.blueGray,
+                slate: colors.slate,
+                gray: colors.gray,
                 rose: colors.rose,
                 orange: colors.orange,
                 indigo: colors.indigo,
@@ -56,6 +51,7 @@ module.exports = {
 
             fontFamily: {
                 sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+                serif: ['PT Serif', ...defaultTheme.fontFamily.serif],
             },
 
             minWidth: {
@@ -64,20 +60,7 @@ module.exports = {
                 '1/2': '50%',
                 '3/4': '75%',
                 'full': '100%',
-            },
-
-            cursor: {
-                grab: 'grab',
-                grabbing: 'grabbing',
-                help: 'help',
-            },
-
-            outline: {
-                'blue-gray': [`2px dotted ${colors.blueGray['500']}`, '2px'],
-            },
-
-            transitionTimingFunction: {
-                css: 'ease',
+                '48': '12rem',
             },
 
             zIndex: {
