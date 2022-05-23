@@ -73,6 +73,10 @@
         {
             "type": "path",
             "url": "../../packages/laravel-base"
+        },
+        {
+            "type": "path",
+            "url": "../../packages/laravel-webauthn"
         }
     ]
 }

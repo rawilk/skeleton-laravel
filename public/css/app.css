@@ -3585,6 +3585,11 @@ span.flatpickr-weekday{cursor:default;font-size:90%;background:transparent;color
   margin-bottom: 0.25rem;
 }
 
+.my-4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .mr-3{
   margin-right: 0.75rem;
 }
@@ -3719,6 +3724,14 @@ span.flatpickr-weekday{cursor:default;font-size:90%;background:transparent;color
 
 .-mb-px{
   margin-bottom: -1px;
+}
+
+.mb-3{
+  margin-bottom: 0.75rem;
+}
+
+.-mr-4{
+  margin-right: -1rem;
 }
 
 .block{
@@ -4094,6 +4107,25 @@ span.flatpickr-weekday{cursor:default;font-size:90%;background:transparent;color
           animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
+@-webkit-keyframes spin{
+
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin{
+
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin{
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+}
+
 .cursor-pointer{
   cursor: pointer;
 }
@@ -4297,6 +4329,21 @@ span.flatpickr-weekday{cursor:default;font-size:90%;background:transparent;color
   border-color: rgb(229 231 235 / var(--tw-divide-opacity));
 }
 
+.divide-slate-300 > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-opacity: 1;
+  border-color: rgb(203 213 225 / var(--tw-divide-opacity));
+}
+
+.divide-slate-500 > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-opacity: 1;
+  border-color: rgb(100 116 139 / var(--tw-divide-opacity));
+}
+
+.divide-slate-400 > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-opacity: 1;
+  border-color: rgb(148 163 184 / var(--tw-divide-opacity));
+}
+
 .overflow-auto{
   overflow: auto;
 }
@@ -4480,6 +4527,11 @@ span.flatpickr-weekday{cursor:default;font-size:90%;background:transparent;color
 .border-blue-200{
   --tw-border-opacity: 1;
   border-color: rgb(191 219 254 / var(--tw-border-opacity));
+}
+
+.border-slate-400{
+  --tw-border-opacity: 1;
+  border-color: rgb(148 163 184 / var(--tw-border-opacity));
 }
 
 .border-t-slate-100{
@@ -4898,6 +4950,11 @@ span.flatpickr-weekday{cursor:default;font-size:90%;background:transparent;color
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-medium{
